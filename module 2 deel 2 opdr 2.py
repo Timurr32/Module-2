@@ -6,6 +6,7 @@ aantal = int(input("Hoeveel M'M's moeten er aan de zak toegevoegd worden? ").low
 
 zak = []
 
+
 for x in range(aantal):
     kleur = random.choice(kleuren)
     zak.append(kleur)
