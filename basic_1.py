@@ -1,7 +1,7 @@
-from RobotArm import RobotArm
+from RobotArm import *
 
 # Import the challenges (in this case challenges/example.py)
-from challenges.example import challenges
+from challenges.basic import challenges
 
 # load the robotarm with a challenge on a level (max 3)
 robotArm = RobotArm(challenges[1],0)

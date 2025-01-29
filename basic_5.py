@@ -1,19 +1,21 @@
-from RobotArm import RobotArm
+from RobotArm import *
 
 # Import the challenges (in this case challenges/example.py)
-from challenges.example import challenges
+from challenges.basic import challenges
 
 # load the robotarm with a challenge on a level (max 3)
-robotArm = RobotArm(challenges[1],0)
+robotArm = RobotArm(challenges[5],0)
 
 # your code starts here:
-for i in range(2):
-    robotArm.moveRight()
+robotArm.moveRight()
+scan = robotArm.scan()
 robotArm.grab()
-for i in range(2):
+if robotArm.scan() == "red":
     robotArm.moveLeft()
-robotArm.drop() 
-
+    robotArm.drop()
+elif robotArm.scan() == "yellow":
+    robotArm.moveRight()
+    robotArm.drop()
 
 # your code ends here
 
