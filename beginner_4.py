@@ -4,14 +4,23 @@ from RobotArm import RobotArm
 from challenges.beginner import challenges
 
 # load the robotarm with a challenge on a level (max 3)
-robotArm = RobotArm(challenges[1],0)
+robotArm = RobotArm(challenges[4],0)
 
-# your code starts here:
-for i in range(4):
+for x in range(3):
+    robotArm.moveRight()
     robotArm.grab()
-    robotArm.moveRight()    
+    robotArm.moveLeft()
+    robotArm.drop()
+    robotArm.moveRight()
+    robotArm.grab()
+    robotArm.moveRight()
     robotArm.drop()
     robotArm.moveLeft()
+    robotArm.moveLeft()
+
+
+# your code starts here:
+
 
 # your code ends here
 
